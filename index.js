@@ -8,7 +8,7 @@ app.use(express.json())
 app.use('/', router)
 
 Connect().then(() => {
-    app.listen(8080, () => {
+    app.listen(process.env.Port, () => {
         setTimeout(() => {
             console.log("Server is Runing !")
         }, 500);
